@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<header>
+	  <img src="images/logo.svg" alt="eurostar logo">
+		<h1>Verhalen voor onderweg</h1>
+		 <nav>
+		 	<ol>
+			<li> <a id="verhalen" href="index.html">Verhalen</a></li>
+			<li> <a href="favorieten.html">Favorieten</a></li>
+			<li> <a href="profiel.html">Profiel</a></li>
+		    </ol>
+		 </nav>
+	</header>
+
+		<form action="zoeken.html">
+	        <select>
+             <option value="" selected disabled hidden>Sorteren...</option>
+             <option value="meestbekeken">Meest bekeken</option>
+             <option value="bestbeoordeeld">Best beoordeeld</option>
+             <option value="kortlang">Kort - Lang</option>
+             <option value="langkort">Lang - Kort</option>
+            </select>
+            
+		  	<input type="search" placeholder="Zoek op titel of woord"> 
+		    <button type="submit" value="Submit">Zoeken</button>
+		</form>
+
+	<main>
+		<article class="artikel1">
+			<h2>Titel 1</h2>
+			<img class="verhaal1" src="images/verhaal1.png" alt="verhaal1">
+			<img class="stars4" src="images/stars4.png" alt="viersterren">
+			<a href="images/download.png" download>
+			 <img class="download1" src="images/download.svg" alt="download">
+			</a>
+		</article>
+		<article class="artikel2">
+			<h2>Titel 2</h2>
+			<img class="verhaal2" src="images/verhaal2.png" alt="verhaal2">
+			<img class="stars3" src="images/stars3.png" alt="viersterren">
+			 <a href="images/download.png" download>
+			<img class="download2" src="images/download.svg" alt="download">
+			</a>
+		</article>
+		<article class="artikel3">
+			<h2>Titel 3</h2>
+			<img class="verhaal3" src="images/verhaal3.png" alt="verhaal3">
+			<img class="stars4" src="images/stars4.png" alt="viersterren">
+			 <a href="images/download.png" download>
+			<img class="download3" src="images/download.svg" alt="download">
+			</a>
+		</article>
+		<article class="artikel4">
+			<h2>Titel 4</h2>
+			<img class="verhaal4" src="images/verhaal4.png" alt="verhaal4">
+			<img class="stars3" src="images/stars3.png" alt="driesterren">
+			<a href="images/download.png" download>
+			 <img class="download4" src="images/download.svg" alt="download">
+			</a>
+		</article>
+	</main>
+
+	<form action="filterenklaar.html">
+		<p>Filteren</p>
+		<label for="slider">Maximaal aantal woorden</label> <br>
+		<input type="range" id="slider" min="14" max="1000" value="50"> <br>
+
+		<label id="sfeer">Sfeer</label> <br>
+        <label for="liefdevol"><input type="checkbox" id="liefdevol" name="Sfeer" value="Liefdevol"> Liefdevol</label><br>
+		<label for="onrustig"><input type="checkbox" id="onrustig" name="Sfeer" value="Onrustig"> Onrustig</label><br>
+		<label for="rustig"><input type="checkbox" id="rustig" name="Sfeer" value="Rustig"> Rustig</label><br>
+		<label for="spanning"><input type="checkbox" id="spanning" name="Sfeer" value="Spanning"> Spanning</label><br>
+		<label for="poëzie"><input type="checkbox" id="poëzie" name="Sfeer" value="Poëzie"> Poëzie</label><br>
+		<label for="bang"><input type="checkbox" id="bang" name="Sfeer" value="Bang"> Bang</label><br>
+		<label for="irritatie"><input type="checkbox" id="irritatie" name="Sfeer" value="Irritatie"> Irritatie</label><br>
+		<label for="plezierig"><input type="checkbox" id="plezierig" name="Sfeer" value="Plezierig"> Plezierig</label><br>
+		<label for="verdrietig"><input type="checkbox" id="verdrietig" name="Sfeer" value="Verdrietig"> Verdrietig</label><br>
+		<label for="grimmig"><input type="checkbox" id="grimmig" name="Sfeer" value="Grimmig"> Grimmig</label><br>
+
+
+		<label id="kleur">Kleur</label><br>
+        <label for="zwartwit"><input type="checkbox" id="zwartwit" name="Kleur" value="Zwart / wit"> Zwart / wit</label><br>
+		<label for="kleurrijk"><input type="checkbox" id="kleurrijk" name="Kleur" value="Kleurrijk"> Kleurrijk</label><br>
+		<label for="dominantekleur"><input type="checkbox" id="dominantekleur "name="Kleur" value="Één dominante kleur"> Één dominante kleur</label><br>
+
+		<a href="filterenklaar.html">
+		 <button type="submit">Klaar</button>
+		</a>
+
+	</form>
+
+		<button id="openfilter">Filteren</button>
+
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
