@@ -5,7 +5,6 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
 	<header>
@@ -18,27 +17,32 @@
 		    </ol>
 		 </nav>
 	</header>
-        <div>
-        	<h1>Verhalen voor onderweg</h1>
+    <div>
+        <h1>Verhalen voor onderweg</h1>
         <img id="bigimg" src="images/bigimage.gif" alt="">
-        </div>
-		<form action="zoeken.html">
-	        <select>
-             <option value="" selected disabled hidden>Sorteren...</option>
-             <option value="meestbekeken">Meest bekeken</option>
-             <option value="bestbeoordeeld">Best beoordeeld</option>
-             <option value="kortlang">Kort - Lang</option>
-             <option value="langkort">Lang - Kort</option>
-            </select>
-            
-		  	<input type="search" placeholder="Zoek op titel of woord"> 
-		    <button type="submit" value="Submit">Zoeken</button>
-		</form>
+    </div>  
+	<form action="zoeken.html">
+	     <select>
+           <option value="" selected disabled hidden>Sorteren...</option>
+           <option value="meestbekeken">Meest bekeken</option>
+           <option value="bestbeoordeeld">Best beoordeeld</option>
+           <option value="kortlang">Kort - Lang</option>
+           <option value="langkort">Lang - Kort</option>
+	     </select>
+          
+		  <input id="zoekveld" type="search" placeholder="Zoek op titel of woord"> 
+		  <button type="submit" value="Submit">Zoeken</button>
+	</form>	
+	<form action="filterenklaar.html">
+		<fieldset>
+		 <legend id="filteren">Filteren</legend>	
+		</fieldset>
 		
-		<form action="filterenklaar.html">
-		<p>Filteren</p>
-		<label for="slider">Maximaal aantal woorden</label> <br>
-		<input type="range" id="slider" min="14" max="1000" value="50"> <br>
+		<div id="slidecontainer">
+		 <label for="slider">Maximaal aantal woorden<br>
+		 <input type="range" id="slider" min="14" max="1000" value="1000"></label>
+		 <p id="demo"></p>
+		</div>
 
 		<fieldset>
 		  <legend id="sfeer">Sfeer</legend><br>
@@ -54,7 +58,6 @@
 		  <label for="grimmig"><input type="checkbox" id="grimmig" name="Sfeer" value="Grimmig"> Grimmig</label><br>
 		</fieldset>
 
-
 		<fieldset>
 		  <legend id="kleur">Kleur</legend><br>
           <label for="zwartwit"><input type="checkbox" id="zwartwit" name="Kleur" value="Zwart / wit"> Zwart / wit</label><br>
@@ -62,51 +65,49 @@
 		  <label for="dominantekleur"><input type="checkbox" id="dominantekleur" name="Kleur" value="Één dominante kleur"> Één dominante kleur</label><br>
 		  
 		  <button type="submit">Klaar</button>
-		</fieldset>
-		
+		</fieldset>	
 	</form>	
-
 	<main>
 		<article class="artikel1">
-			<img class="verhaal1" src="images/zombie.png" alt="verhaal1">
+			<img class="verhaal" src="images/zombie.png" alt="verhaal1">
 			<h2>Zombie</h2>
-			<p>Hier komt tekst over het verhaal te staan.</p>
-			<img class="stars4" src="images/stars4.png" alt="viersterren">
+			<p>Hongerige ondoden lopen zielloos over het stationsplein. Op zoek naar voedsel, naar half verganen...</p>
+			<img class="stars" src="images/stars4.png" alt="viersterren">
 			<a href="images/download.png" download>
-			 <img class="download1" src="images/download.svg" alt="download">
+			 <img class="download" src="images/download.svg" alt="download">
 			</a>
 		</article>
 		<article class="artikel2">
-			<img class="verhaal2" src="images/paranoia.png" alt="verhaal2">
+			<img class="verhaal" src="images/paranoia.png" alt="verhaal2">
 			<h2>Paranoia</h2>
-			<p>Hier komt tekst over het verhaal te staan.</p>
-			<img class="stars3" src="images/stars3.png" alt="viersterren">
+			<p>Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk...</p>
+			<img class="stars" src="images/stars3.png" alt="viersterren">
 			 <a href="images/download.png" download>
-			<img class="download2" src="images/download.svg" alt="download">
+			<img class="download" src="images/download.svg" alt="download">
 			</a>
 		</article>
 		<article class="artikel3">
-			<img class="verhaal3" src="images/literatuur.png" alt="verhaal3">
+			<img class="verhaal" src="images/literatuur.png" alt="verhaal3">
 			<h2>Littérature Definitionelle</h2>
-			<p>Hier komt tekst over het verhaal te staan.</p>
-			<img class="stars4" src="images/stars4.png" alt="viersterren">
+			<p>Cilindervormige blikken trommel 21, met alle onderdelen op gelijke afstand van het middelpunt...</p>
+			<img class="stars" src="images/stars4.png" alt="viersterren">
 			 <a href="images/download.png" download>
-			<img class="download3" src="images/download.svg" alt="download">
+			<img class="download" src="images/download.svg" alt="download">
 			</a>
 		</article>
 		<article class="artikel4">
-			<img class="verhaal4" src="images/decock.png" alt="verhaal4">
+			<img class="verhaal" src="images/decock.png" alt="verhaal4">
 			<h2>De Cock</h2>
-			<p>Hier komt tekst over het verhaal te staan.</p>
-			<img class="stars3" src="images/stars3.png" alt="driesterren">
+			<p>Stationsplein, 12:00 uur in de middag. De Cock met C O C K stapte de bus uit in de kruiwagen...</p>
+			<img class="stars" src="images/stars3.png" alt="driesterren">
 			<a href="images/download.png" download>
-			 <img class="download4" src="images/download.svg" alt="download">
+			 <img class="download" src="images/download.svg" alt="download">
 			</a>
 		</article>
 	</main>
+   
+    <button id="openfilter">Filteren</button>
     
-		<button id="openfilter">Filteren</button>
-
 	<script src="js/script.js"></script>
 </body>
 </html>
