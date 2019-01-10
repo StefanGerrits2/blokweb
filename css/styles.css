@@ -42,10 +42,36 @@ h1 {
 	position: absolute;
 	margin-left: 7.5%; 
 	margin-right: 25%;
+	margin-top: 1em;
 }
 
 #bigimg {
 	max-width: 100%;
+}
+
+/*foutmelding*/
+div:nth-of-type(2) {
+	display: grid;
+	background-color: #b51521;	
+	padding-left: 1em;
+	max-height: 5em;
+	display: none; /*dit moet met een toggle visible worden in javascript*/
+}
+
+div:nth-of-type(2) p {
+	color: white;
+	width: 20em;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+div:nth-of-type(2) img {
+	width: 3em;
+	cursor: pointer;
+	height: 10%;
+	padding: 1em;
+	margin-left: auto;
+	margin-right: 1em;
 }
 
 /*navigatie*/
@@ -79,9 +105,7 @@ li a:hover {
 	padding: 0.7em 1em 1em 1em;
 }
 
-#verhalen,
-#favorieten,
-#profiel {
+#active {
 	border-top: 0.25em solid #fbdd0d;
 	padding: 0.7em 1em 1em 1em;
 }
@@ -115,13 +139,12 @@ input[type="search"]:focus {
 
 .download {
 	width: 12%;
-	margin: 0em 0em 1em auto;
-	position: relative;
+	margin: 0em 0em 1em 13%;
 }
 
 .stars {
 	width: 60%;
-	margin: 1em 1em 1em 1.2em;
+	margin: auto 1em 1em 1.2em;
 }
 
 /*main*/
@@ -137,7 +160,7 @@ main p {
 	line-height: 1.5rem;
 }
 
-article {
+.article {
 	width: 100%;
 	margin: 10px 4px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px 0px;
@@ -148,10 +171,11 @@ article {
 	border-top: 0px;
 	background: rgb(255, 255, 255);
 	border-radius: 14px 14px 8px 8px;
+	position: relative;
 }
 
 /*titel artikel*/
-article h2 {
+.article h2 {
 	color: #384664;
 	margin: 1em 1em 1em 0.7em;
     font-weight: 700;
@@ -162,7 +186,7 @@ article h2 {
 	line-height: 24px;
 }
 
-article p {
+.article p {
 	box-sizing: border-box;
 	margin: 1em;
 }
@@ -187,12 +211,37 @@ li a, button {
 	cursor: pointer;
 }
 
-body button:nth-child(6) {
+.verderlezen {
+	color: #56575b;
+	background-color: #fbdd0d;
+	border: none;
+	padding: 1em 1em;
+	transition: 0.2s ease-out 0s;
+	text-transform: uppercase;
+	border-radius: 4px;
+	box-shadow: rgb(210, 184, 43) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    color: rgb(85, 86, 90);
+	letter-spacing: 0.03em;
+	font-weight: 700;
+	text-decoration: none;
+	width: 90%;
+	display: block;
+	margin: auto;
+	margin-bottom: 1em;
+}
+
+body button:nth-child(7) {
 	position: fixed;
 	width: 10em;
 	bottom: 0.1em;
 	left: 50%;
 	margin-left: -5em; /*bron: https://stackoverflow.com/questions/2005954/center-a-positionfixed-element */
+}
+
+fieldset button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 form:first-of-type button {
@@ -318,22 +367,97 @@ legend {
 	text-align: center;
 }
 
+/*verhaal pagina*/
+#verhaalimg {
+	width: 100%;
+}
+
+#grid {
+	display: grid;
+	grid-template-columns: 50% 25% 25%;
+	border-bottom: 0.5em solid #24b6c9;
+	padding-bottom: 1em;
+}
+
+h2 {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	margin-left: 2%;
+	color: #384664;
+}
+
+#reviewgeven,
+#voegtoe,
+#downloaden {
+	cursor: pointer;
+}
+
+#verhaal {
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#parent {
+	position: relative;
+}
+
+#child {
+	position:absolute;
+	width: 4.7%;
+	top: 61.57em;
+	right: 0;
+	left: 36.2em;
+	cursor: pointer;
+	transform: rotate(0deg);
+	transition: 1s ease-in;
+	
+}
+
 /*animaties*/
 
+#favorietnav {
+	transition: background-color 3s ease;
+}
 
+#favorietnav.rood {
+	
+	background-color: #b7144e;	
+}
+
+div:nth-of-type(2).show {
+	display: flex;
+}
+
+div:nth-of-type(2).hide {
+	display: none;
+}
+
+h2.red {
+	color: #b7144f;
+}
+
+#child.draaien {
+    transform: rotate(360deg);
+}
 
 /*mediaqueries*/
 @media screen and (max-width: 600px) {
   form:nth-of-type(2) {
     display: none;
   }
+  form:nth-of-type(2).show {
+	display: grid;
+	max-width: 100%;
+  }
 }
 
 @media(min-width:600px) {
-	article {
+	.article {
 		width: 45%;
 	}
-	body button:nth-child(6){
+	body button:nth-child(7){
 		display: none;
 	}
 	
@@ -344,7 +468,7 @@ legend {
 		margin-right: auto;;
 	}
 	h1 {
-		margin-right: 44.5%;
+		margin-left: 9%;
 	}
 	form:nth-of-type(2) {
 	    float: left;
@@ -355,10 +479,16 @@ legend {
 	header img {
 		margin-left: 5%;
 	}
+	h2 {
+		margin-left: 8%;
+	}
+	.download {
+		margin: 0em 0em 1em auto;
+	}
 } 
 
 @media(min-width:850px) {
-	article {
+	.article {
 		width: 30%;
 	}
 	 ol:first-child {
@@ -367,15 +497,43 @@ legend {
 	header img {
 		margin-left: 15%
 	}
+	#grid {
+		display: grid;
+		grid-template-columns: 60% 18% 10% 10%;	
+	}
+	h2 {
+		grid-column-end: 2;
+		margin-left: 13%;
+	}
+	#downloaden,
+	#voegtoe {
+		width: 75%;
+	}
+	#reviewgeven {
+		width: 80%;
+	}
+	#verhaal {
+	width: 75%;
+    }
 }
 
 @media(min-width:960px) {
 	h1 {
 		font-size: 2.5em;
 		text-align: left; 
-		margin-left: 15%;
+		margin-left: 16.5%;
+		margin-right: 44.5%;
 	}
 	form:first-of-type button {
 		margin-right: 15.5em;
 	}
+	h2 {
+		margin-left: 27%;
+	}
+	#verhaal {
+	width: 50%;
+    }
+
 }
+
+

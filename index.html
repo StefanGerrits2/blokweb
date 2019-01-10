@@ -8,10 +8,10 @@
 <body>
 
 	<header>
-	  <img src="images/logo.svg" alt="eurostar logo">
+	  <a href="index.html"><img src="images/logo.svg" alt="eurostar logo"></a>
 		 <nav>
 		 	<ol>
-			<li> <a id="verhalen" href="index.html">Verhalen</a></li>
+			<li> <a id="active" href="index.html">Verhalen</a></li>
 			<li> <a href="favorieten.html">Favorieten</a></li>
 			<li> <a href="profiel.html">Profiel</a></li>
 		    </ol>
@@ -19,9 +19,9 @@
 	</header>
     <div>
         <h1>Verhalen voor onderweg</h1>
-        <img id="bigimg" src="images/bigimage.gif" alt="">
+        <img id="bigimg" src="images/bigimg.png" alt="">
     </div>  
-	<form action="zoeken.html">
+	<form action="#">
 	     <select>
            <option value="" selected disabled hidden>Sorteren...</option>
            <option value="meestbekeken">Meest bekeken</option>
@@ -33,9 +33,14 @@
 		  <input id="zoekveld" type="search" placeholder="Zoek op titel of woord"> 
 		  <button type="submit" value="Submit">Zoeken</button>
 	</form>	
+	<div>
+		  <p>Oeps, probeer alleen woorden in te typen</p>
+		  <img src="images/kruis.svg" alt="">
+    </div>
+	
 	<form action="filterenklaar.html">
 		<fieldset>
-		 <legend id="filteren">Filteren</legend>	
+			<legend id="filteren">Filteren</legend>	
 		</fieldset>
 		
 		<div id="slidecontainer">
@@ -68,16 +73,17 @@
 		</fieldset>	
 	</form>	
 	<main>
-		<article class="artikel1">
-			<img class="verhaal" src="images/zombie.png" alt="verhaal1">
+		<article class="article">
+			<img class="verhaal" src="images/zombie.png" alt="verhaal1"> 
 			<h2>Zombie</h2>
 			<p>Hongerige ondoden lopen zielloos over het stationsplein. Op zoek naar voedsel, naar half verganen...</p>
 			<img class="stars" src="images/stars4.png" alt="viersterren">
 			<a href="images/download.png" download>
 			 <img class="download" src="images/download.svg" alt="download">
 			</a>
+			<button class="verderlezen">Verder lezen</button>
 		</article>
-		<article class="artikel2">
+		<article class="article">
 			<img class="verhaal" src="images/paranoia.png" alt="verhaal2">
 			<h2>Paranoia</h2>
 			<p>Ik sluip de bus uit. Kop in de kraag. Ik maak me klein en duw m’n zoon vooruit. Hij slaapt. Eindelijk...</p>
@@ -85,8 +91,9 @@
 			 <a href="images/download.png" download>
 			<img class="download" src="images/download.svg" alt="download">
 			</a>
+			<button class="verderlezen">Verder lezen</button>
 		</article>
-		<article class="artikel3">
+		<article class="article">
 			<img class="verhaal" src="images/literatuur.png" alt="verhaal3">
 			<h2>Littérature Definitionelle</h2>
 			<p>Cilindervormige blikken trommel 21, met alle onderdelen op gelijke afstand van het middelpunt...</p>
@@ -94,8 +101,9 @@
 			 <a href="images/download.png" download>
 			<img class="download" src="images/download.svg" alt="download">
 			</a>
+			<button class="verderlezen">Verder lezen</button>
 		</article>
-		<article class="artikel4">
+		<article class="article">
 			<img class="verhaal" src="images/decock.png" alt="verhaal4">
 			<h2>De Cock</h2>
 			<p>Stationsplein, 12:00 uur in de middag. De Cock met C O C K stapte de bus uit in de kruiwagen...</p>
@@ -103,11 +111,22 @@
 			<a href="images/download.png" download>
 			 <img class="download" src="images/download.svg" alt="download">
 			</a>
+			<button class="verderlezen">Verder lezen</button>
+		</article>
+		<article class="article">
+			<a href="verhaal.html"><img class="verhaal" src="images/nicodijkshoorn.png" alt="verhaal4"></a>
+			<h2>Nico Dijkshoorn die Mart Smeets imiteert</h2>
+			<p>Ik stap uit een, ja wat is het eigenlijk?, een bus. Lijn21? Zou zo maar kunnen. Twaalf uur. In de middag. Mijn zoon...</p>
+			<img class="stars" src="images/stars3.png" alt="driesterren">
+			<a href="images/download.png" download>
+			 <img class="download" src="images/download.svg" alt="download">
+			</a>
+			<button class="verderlezen">Verder lezen</button>
 		</article>
 	</main>
    
     <button id="openfilter">Filteren</button>
     
-	<script src="js/script.js"></script>
+	<script src="js/home.js"></script>
 </body>
 </html>
