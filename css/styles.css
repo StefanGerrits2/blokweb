@@ -377,19 +377,18 @@ legend {
 	grid-template-columns: 50% 25% 25%;
 	border-bottom: 0.5em solid #24b6c9;
 	padding-bottom: 1em;
-	max-width: 300px;
 }
 
 #voegtoe {
-	
+	width: 25%;
 }
 
 #stars2 {
-	
+	width: 25%;
 }
 
 #downloaden2 {
-	
+	width: 25%;
 }
 
 h2 {
