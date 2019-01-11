@@ -379,18 +379,6 @@ legend {
 	padding-bottom: 1em;
 }
 
-#voegtoe {
-	width: 25%;
-}
-
-#stars2 {
-	width: 25%;
-}
-
-#downloaden2 {
-	width: 25%;
-}
-
 h2 {
 	grid-column-start: 1;
 	grid-column-end: 4;
