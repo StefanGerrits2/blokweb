@@ -377,6 +377,19 @@ legend {
 	grid-template-columns: 50% 25% 25%;
 	border-bottom: 0.5em solid #24b6c9;
 	padding-bottom: 1em;
+	max-width: 300px;
+}
+
+#voegtoe {
+	
+}
+
+#stars2 {
+	
+}
+
+#downloaden2 {
+	
 }
 
 h2 {
@@ -388,7 +401,9 @@ h2 {
 
 #reviewgeven,
 #voegtoe,
-#downloaden {
+#downloaden,
+#stars2,
+#downloaden2{
 	cursor: pointer;
 }
 
