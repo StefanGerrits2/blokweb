@@ -405,10 +405,10 @@ h2 {
 
 #child {
 	position:absolute;
-	width: 4.7%;
+	width: 4.65%;
 	top: 61.57em;
 	right: 0;
-	left: 36.2em;
+	left: 36.25em;
 	cursor: pointer;
 	transform: rotate(0deg);
 	transition: 1s ease-in;
@@ -451,6 +451,12 @@ h2.red {
 	display: grid;
 	max-width: 100%;
   }
+  h1 {
+	font-size: 1.5em;
+	}
+	#child {
+		display: none;
+	}
 }
 
 @media(min-width:600px) {
@@ -513,8 +519,11 @@ h2.red {
 		width: 80%;
 	}
 	#verhaal {
-	width: 75%;
+	    width: 75%;
     }
+	#child {
+		display: block;
+	}
 }
 
 @media(min-width:960px) {
@@ -535,5 +544,6 @@ h2.red {
     }
 
 }
+
 
 
