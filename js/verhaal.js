@@ -8,16 +8,24 @@ var hartje = "roze";
 var afbeelding = document.getElementById("voegtoe");
 var favorietnav = document.getElementById("favorietnav");
 var h2 = document.querySelector("h2");
-var knotsgekke = document.getElementById("child");
 
+/*delay voor favorieten tabje*/
+function terug() {
+	favorietnav.classList.toggle("rood");
+}
 
+/*animatie favorieten tabje en titel verhaal*/
 function favoriet(){
     if (hartje == "roze") {
+		setTimeout(terug, 2500);
+	    favorietnav.classList.toggle("rood");
+	    h2.classList.toggle("red");
         afbeelding.src = "images/toegevoegd1.svg";
 		hartje = "rood";
     }
 	
     else {
+		h2.classList.toggle("blue");
         afbeelding.src = "images/voegtoe1.svg";
 		hartje = "roze";
    }
@@ -25,25 +33,7 @@ function favoriet(){
 
 afbeelding.addEventListener("click", favoriet, false);
 
-
-/*animatie favorieten tabje en titel verhaal*/
-
-function terug() {
-	favorietnav.classList.toggle("rood");
-}
-
-afbeelding.addEventListener("click", function() {
-	
-	 setTimeout(terug, 3000);
-	
-	 favorietnav.classList.toggle("rood");
-	 h2.classList.toggle("red");
-     	
-});
-
-
 /*animatie verhaal voor desktop*/
-
 var verhaal = document.getElementById("verhaal");
 var verhaalnummer = "1";
 
@@ -86,11 +76,11 @@ window.addEventListener("scroll", function() {
 
 });
 
-
 /*woord knotsgek ronddraaien*/
+var knotsgekke = document.getElementById("child");
 
 knotsgekke.addEventListener("mouseover", function() {
-	
+	 
 	 knotsgekke.classList.toggle("draaien");
 	
 });

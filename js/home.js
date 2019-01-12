@@ -12,10 +12,10 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 };				  
-
 /*Bron: https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
 
 
+/*melding laten zien*/
 var melding = document.querySelector("div:nth-of-type(2)");
 var zoek = document.querySelector("form:first-of-type button");
 
@@ -25,6 +25,7 @@ zoek.addEventListener("click", function() {
      	
 });
 
+/*wanneer je op het kruisje klikt verdwijnt de melding*/
 var kruis = document.querySelector("div:nth-of-type(2) img");
 
 kruis.addEventListener("click", function() {
@@ -33,6 +34,7 @@ kruis.addEventListener("click", function() {
      	
 });
 
+/*laat filteren op mobiel zien wanneer je op de knop filteren drukt*/
 var filterknop = document.querySelector("body button:nth-child(7)");
 var formulier = document.querySelector("form:nth-of-type(2)");
 

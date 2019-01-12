@@ -19,9 +19,14 @@ header {
 	color: white;
 }
 
+header p {
+	width: 9.2em;
+	margin: 0.5em 0em 0em auto;
+}
+
 header img {
 	cursor: pointer;
-	margin-top: 2em;
+	margin-top: 1em;
 	margin-bottom: 2em;
 	margin-left: 13%;	
 }
@@ -121,6 +126,7 @@ select{
 
 input[type="search"] {
 	max-width: 35%;
+	margin-left: auto;
 }
 
 input[type="search"]:focus {
@@ -174,7 +180,7 @@ main p {
 	position: relative;
 }
 
-/*titel artikel*/
+/*artikel tekst*/
 .article h2 {
 	color: #384664;
 	margin: 1em 1em 1em 0.7em;
@@ -215,7 +221,7 @@ li a, button {
 	color: #56575b;
 	background-color: #fbdd0d;
 	border: none;
-	padding: 1em 1em;
+	padding: 0.8em 1.1em 1.5em 1.1em;
 	transition: 0.2s ease-out 0s;
 	text-transform: uppercase;
 	border-radius: 4px;
@@ -224,10 +230,11 @@ li a, button {
 	letter-spacing: 0.03em;
 	font-weight: 700;
 	text-decoration: none;
-	width: 90%;
+	width: 83%;
+	height: 2%;
 	display: block;
-	margin: auto;
-	margin-bottom: 1em;
+	text-align: center;
+	margin: auto auto 1em auto;
 }
 
 body button:nth-child(7) {
@@ -239,6 +246,7 @@ body button:nth-child(7) {
 }
 
 fieldset button {
+	width: 40%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -248,7 +256,7 @@ form:first-of-type button {
 	margin: 0.2em 0em 0em 0.5em;
 }
 
-button:hover {
+button:hover, .verderlezen:hover {
 	background-color: #ffeb6b;
 }
 
@@ -262,7 +270,6 @@ input[type="range"] {
 input[type="range"]:hover {
 	opacity: 1;
 }
-
 
 input[type="checkbox"] {
 	cursor: pointer;	
@@ -284,7 +291,7 @@ form:first-of-type {
 form:nth-of-type(2) {
 	background-color: #384664;
 	color: white;
-	padding: 0em 1em;
+	padding: 0em 1em 1em 1em;
 	margin: 1.6em 1em 0em 1em;
 	max-width: 25%;
 	border-radius: 14px 14px 8px 8px;
@@ -320,7 +327,7 @@ legend {
 	padding: 1em 0em 0.2em 0em;
 }
 
-/*slider styles*/
+/*slider styles: Bron: https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
 .slidecontainer {
   width: 100%; 
 }
@@ -360,7 +367,6 @@ legend {
   cursor: pointer; 
   border-radius: 50%;
 }
-/*Bron: https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
 
 #demo {
 	margin: 0.5em 0em 1em 0em;
@@ -416,14 +422,13 @@ h2 {
 }
 
 /*animaties*/
-
 #favorietnav {
-	transition: background-color 3s ease;
+	transition: 2s ease;
 }
 
 #favorietnav.rood {
-	
-	background-color: #b7144e;	
+	background-color: #b51d26;
+	transition: 2s ease;
 }
 
 div:nth-of-type(2).show {
@@ -435,7 +440,11 @@ div:nth-of-type(2).hide {
 }
 
 h2.red {
-	color: #b7144f;
+	color: #b51d26;
+}
+
+h2.blue {
+	color: #384664;
 }
 
 #child.draaien {
@@ -470,9 +479,7 @@ h2.red {
     ol:first-child {
 	    margin-left: 5%;
     }
-	select {
-		margin-right: auto;;
-	}
+
 	h1 {
 		margin-left: 9%;
 	}
@@ -490,6 +497,18 @@ h2.red {
 	}
 	.download {
 		margin: 0em 0em 1em auto;
+	}
+	.verderlezen {
+		width: 75%;
+	}
+	#grid {
+		margin-top: 0.5em;
+	}
+	form:first-of-type button, header p {
+		margin-right: 3%;
+	}
+	fieldset button {
+		display: none;
 	}
 } 
 
@@ -524,6 +543,9 @@ h2.red {
 	#child {
 		display: block;
 	}
+	select {
+		margin-left: 32.5%; 
+	}
 }
 
 @media(min-width:960px) {
@@ -534,7 +556,7 @@ h2.red {
 		margin-right: 44.5%;
 	}
 	form:first-of-type button {
-		margin-right: 15.5em;
+		margin-right: 15.05em;
 	}
 	h2 {
 		margin-left: 27%;
@@ -542,7 +564,13 @@ h2.red {
 	#verhaal {
 	width: 50%;
     }
-
+	select {
+		margin-left: 27.8%; 
+	}
+	header p {
+		margin-left: auto;
+		margin-right: 15%;
+	}
 }
 
 
