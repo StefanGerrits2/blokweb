@@ -17,7 +17,7 @@ function terug() {
 /*animatie favorieten tabje en titel verhaal*/
 function favoriet(){
     if (hartje == "roze") {
-		setTimeout(terug, 2500);
+		setTimeout(terug, 2500); /*delay toevoegen om animatie opnieuw uit te voeren*/
 	    favorietnav.classList.toggle("rood");
 	    h2.classList.toggle("red");
         afbeelding.src = "images/toegevoegd1.svg";
